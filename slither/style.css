@@ -1,0 +1,22 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f1efe9;--ink:#232b2a;--mute:#838b87;--line:#d9d6cd;--board:#e8e6dd;--good:#2fa38f;--bad:#e8665a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033;--board:#1a2124;--good:#4fd1b8;--bad:#ff7d70}}
+:root[data-theme="dark"]{--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033;--board:#1a2124;--good:#4fd1b8;--bad:#ff7d70}
+*,*:before,*:after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px 14px}
+.hud{display:flex;gap:40px}
+.stat{text-align:center}
+.stat span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.stat b{font-size:clamp(34px,8vmin,52px);font-weight:200;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+#stage{position:relative;width:min(92vw,480px,60vh);aspect-ratio:1;border-radius:18px;overflow:hidden;background:var(--board);touch-action:none;cursor:pointer}
+canvas{width:100%;height:100%;display:block}
+#msg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;
+  color:var(--mute);font-size:14px;pointer-events:none;background:color-mix(in srgb,var(--board) 70%,transparent);transition:opacity .25s}
+#msg b{display:block;color:var(--ink);font-weight:500;font-size:22px;margin-bottom:6px}
+#msg small{display:block;margin-top:10px;font-size:12px;opacity:.85}
+#sound{min-height:40px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--mute);font:inherit;font-size:13px;cursor:pointer}
+#sound:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
