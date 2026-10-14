@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sweep</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Mines</span><b id="mines">10</b></div>
+    <div class="stat"><span>Time</span><b id="time">0</b></div>
+    <div class="stat"><span>Best</span><b id="best">–</b></div>
+  </div>
+  <div class="seg" id="levels" role="group" aria-label="Difficulty">
+    <button data-lv="easy" aria-pressed="true">Easy</button>
+    <button data-lv="medium" aria-pressed="false">Medium</button>
+    <button data-lv="hard" aria-pressed="false">Hard</button>
+  </div>
+  <p id="status" role="status">Tap a square to begin</p>
+  <div id="grid" class="grid" role="grid" aria-label="Minefield"></div>
+  <div class="actions">
+    <button id="mode" aria-pressed="false">Reveal</button>
+    <button id="new">New game</button>
+  </div>
+  <p class="hint">Switch to Flag mode (or right-click / F) to mark mines. Tap a number to clear its neighbours once flagged.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
