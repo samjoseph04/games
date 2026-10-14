@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Archery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Score</span><b id="score">0</b></div>
+    <div class="stat"><span>Arrows</span><b id="arrows">10</b></div>
+    <div class="stat"><span>Best</span><b id="best">0</b></div>
+  </div>
+  <div id="stage">
+    <canvas id="c"></canvas>
+    <div id="msg"><b>Tap to start</b>Drag back from the bow to aim, release to shoot<small>Keyboard: ↑ ↓ to aim, hold Space to draw, release to shoot</small></div>
+  </div>
+  <button id="sound">Sound on</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
