@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pairs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Moves</span><b id="moves">0</b></div>
+    <div class="stat"><span>Time</span><b id="time">0</b></div>
+    <div class="stat"><span>Best</span><b id="best">–</b></div>
+  </div>
+  <div class="seg" id="levels" role="group" aria-label="Difficulty">
+    <button data-lv="easy" aria-pressed="true">Easy</button>
+    <button data-lv="medium" aria-pressed="false">Medium</button>
+    <button data-lv="hard" aria-pressed="false">Hard</button>
+  </div>
+  <p id="status" role="status">Flip two cards to find a match</p>
+  <div id="grid" class="grid" role="group" aria-label="Cards"></div>
+  <div class="actions"><button id="new" class="primary">New game</button></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
