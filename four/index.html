@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Four</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Wins</span><b id="w">0</b></div>
+    <div class="stat"><span>Draws</span><b id="d">0</b></div>
+    <div class="stat"><span>Losses</span><b id="l">0</b></div>
+  </div>
+  <div class="seg" id="levels" role="group" aria-label="Difficulty">
+    <button data-lv="easy" aria-pressed="false">Easy</button>
+    <button data-lv="medium" aria-pressed="true">Medium</button>
+    <button data-lv="hard" aria-pressed="false">Hard</button>
+  </div>
+  <p id="status" role="status"><i id="dot"></i><span id="statusText">Your turn</span></p>
+  <div id="board" class="board" role="group" aria-label="Board"></div>
+  <div class="actions"><button id="new" class="primary">New game</button></div>
+  <p class="hint">Connect four in a row. Tap a column or press 1–7.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
