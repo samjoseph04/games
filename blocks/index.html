@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blocks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Score</span><b id="score">0</b></div>
+    <div class="stat"><span>Lines</span><b id="lines">0</b></div>
+    <div class="stat"><span>Level</span><b id="level">1</b></div>
+  </div>
+  <div class="play">
+    <div id="well">
+      <canvas id="board"></canvas>
+      <div id="msg"><b>Tap to start</b>Stack the blocks and clear lines<small>← → move · ↑ rotate · ↓ soft drop<br>Space drops · P pauses</small></div>
+    </div>
+    <aside>
+      <div class="box"><small>Next</small><canvas id="next" width="96" height="96"></canvas></div>
+      <div class="box"><small>Best</small><b id="best">0</b></div>
+      <button id="sound">Sound on</button>
+    </aside>
+  </div>
+  <div class="pad" aria-label="Touch controls">
+    <button data-a="left" aria-label="Move left">◀</button>
+    <button data-a="rotate" aria-label="Rotate">⟳</button>
+    <button data-a="right" aria-label="Move right">▶</button>
+    <button data-a="down" aria-label="Soft drop">▼</button>
+    <button data-a="drop" aria-label="Hard drop">⤓</button>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
