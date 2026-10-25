@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Slide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Moves</span><b id="moves">0</b></div>
+    <div class="stat"><span>Time</span><b id="time">0</b></div>
+    <div class="stat"><span>Best</span><b id="best">–</b></div>
+  </div>
+  <div class="seg" id="sizes" role="group" aria-label="Board size">
+    <button data-n="3" aria-pressed="true">3 × 3</button>
+    <button data-n="4" aria-pressed="false">4 × 4</button>
+  </div>
+  <p id="status" role="status">Put the numbers in order</p>
+  <div id="board" class="board" role="group" aria-label="Puzzle"></div>
+  <div class="actions"><button id="new" class="primary">Shuffle</button></div>
+  <p class="hint">Tap a tile next to the gap (or in its row or column) to slide it. Arrow keys work too.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
