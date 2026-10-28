@@ -1,0 +1,26 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f1efe9;--ink:#232b2a;--mute:#838b87;--line:#d9d6cd;--well:#e8e6dd}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033;--well:#1a2124}}
+:root[data-theme="dark"]{--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033;--well:#1a2124}
+*,*:before,*:after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:18px 14px}
+.hud{display:flex;gap:34px}
+.stat{text-align:center}
+.stat span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.stat b{font-size:clamp(30px,7vmin,46px);font-weight:200;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+#stage{position:relative;width:min(92vw,480px,58vh);aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--well);touch-action:none;cursor:pointer}
+canvas{width:100%;height:100%;display:block}
+#msg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:0 24px;
+  color:var(--mute);font-size:14px;background:color-mix(in srgb,var(--well) 82%,transparent);backdrop-filter:blur(3px)}
+#msg[hidden]{display:none}
+#msg b{color:var(--ink);font-weight:500;font-size:24px}
+#msg small{margin-top:8px;font-size:12px;opacity:.85}
+.hint{margin:0;max-width:380px;text-align:center;font-size:12px;line-height:1.5;color:var(--mute)}
+#par{min-height:1.5em;font-size:13px}
+.actions{display:flex;gap:10px}
+.actions button{min-height:44px;padding:10px 22px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:14px;cursor:pointer;touch-action:manipulation}
+.actions .primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
