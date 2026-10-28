@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maze Paint</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Level</span><b id="level">1</b></div>
+    <div class="stat"><span>Moves</span><b id="moves">0</b></div>
+    <div class="stat"><span>Painted</span><b id="painted">0%</b></div>
+  </div>
+  <div id="stage">
+    <canvas id="c"></canvas>
+    <div id="msg" hidden><b id="mTitle"></b><span id="mText"></span><small>Tap to continue</small></div>
+  </div>
+  <p id="par" class="hint"></p>
+  <div class="actions">
+    <button id="restart">Restart</button>
+    <button id="skip" class="primary">New maze</button>
+  </div>
+  <p class="hint">Paint every square. Swipe, drag, tap a neighbouring square, or use arrow keys / WASD.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
