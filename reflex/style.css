@@ -1,0 +1,26 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f1efe9;--ink:#232b2a;--mute:#838b87;--line:#d9d6cd;--well:#e8e6dd;--wait:#e8665a;--go:#2fa38f;--on:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033;--well:#1a2124;--wait:#c9544a;--go:#3bbba4;--on:#0d1213}}
+:root[data-theme="dark"]{--bg:#14181a;--ink:#e8ecea;--mute:#72807b;--line:#273033;--well:#1a2124;--wait:#c9544a;--go:#3bbba4;--on:#0d1213}
+*,*:before,*:after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px 14px}
+.hud{display:flex;gap:34px}
+.stat{text-align:center}
+.stat span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.stat b{font-size:clamp(28px,6.5vmin,42px);font-weight:200;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pad{width:min(92vw,520px);height:min(52vh,380px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 24px;text-align:center;
+  border-radius:24px;background:var(--well);color:var(--ink);cursor:pointer;transition:background .12s}
+.pad b{font-size:clamp(30px,8vmin,52px);font-weight:300;letter-spacing:-.02em}
+.pad span{font-size:15px;color:var(--mute)}
+.pad.wait{background:var(--wait);color:var(--on)}
+.pad.go{background:var(--go);color:var(--on)}
+.pad.wait span,.pad.go span{color:inherit;opacity:.85}
+.pad:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.chips{display:flex;gap:8px;list-style:none;margin:0;padding:0;min-height:34px}
+.chips li{min-width:62px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;text-align:center;font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.chips li.done{color:var(--ink);border-color:var(--ink)}
+.hint{margin:0;font-size:12px;color:var(--mute);text-align:center}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
