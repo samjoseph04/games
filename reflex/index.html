@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reflex</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hud">
+    <div class="stat"><span>Round</span><b id="round">1/5</b></div>
+    <div class="stat"><span>Last</span><b id="last">–</b></div>
+    <div class="stat"><span>Best avg</span><b id="best">–</b></div>
+  </div>
+  <div id="pad" class="pad ready" role="button" tabindex="0" aria-live="polite">
+    <b id="title">Tap to start</b>
+    <span id="sub">Tap as soon as the screen turns green</span>
+  </div>
+  <ul id="chips" class="chips" aria-label="Round times"></ul>
+  <p class="hint">Five rounds. Tapping too early doesn't count. Space or Enter also works.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
